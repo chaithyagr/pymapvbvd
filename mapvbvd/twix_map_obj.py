@@ -431,6 +431,7 @@ class twix_map_obj:
             if len(self.Lin) > self.NLin // self.NRep:
                 logging.warning('NLin is at maximum value for uint16, this may cause issues with indexing, trrying to fix')
             self.NLin = len(self.Lin) // self.NRep
+            self.Lin = np.arange(self.NLin)
         
         # ok, let us assume for now that all NCol and NCha entries are
         # the same for all mdhs:
